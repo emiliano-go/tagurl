@@ -1,0 +1,29 @@
+[project]
+name = "tagurl"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Emiliano Gandini Outeda", email = "emiliano.gandini@protonmail.com" }
+]
+requires-python = ">=3.12.7"
+dependencies = []
+
+[project.scripts]
+tagurl = "tagurl:main"
+
+[build-system]
+requires = ["uv_build>=0.12.9,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "ruff>=0.16.6",
+]
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP", "B", "A", "SIM"]
